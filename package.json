@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "cm":"git-cz"
+    "cm": "git-cz"
   },
   "repository": {
     "type": "git",
@@ -19,11 +19,20 @@
   "homepage": "https://github.com/react-native-pure/toast#readme",
   "devDependencies": {
     "commitizen": "^3.0.7",
-    "cz-conventional-changelog": "^2.1.0"
+    "cz-conventional-changelog": "^2.1.0",
+    "react-native": "0.57",
+    "react": "16.6.3"
+  },
+  "peerDependencies": {
+    "react-native": ">= 0.47",
+    "react": ">= 16.0.0"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@react-native-pure/sibling": "^1"
   }
 }
