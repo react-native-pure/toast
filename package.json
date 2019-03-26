@@ -18,12 +18,24 @@
   },
   "homepage": "https://github.com/react-native-pure/toast#readme",
   "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@react-native-pure/sibling": "^1.0.0",
+    "babel-jest": "^24.5.0",
     "commitizen": "^3.0.7",
     "cz-conventional-changelog": "^2.1.0",
+    "fbemitter": "^2.1.1",
+    "jest": "^24.5.0",
+    "jest-haste-map": "^24.5.0",
+    "react": "16.6.3",
     "react-native": "0.57",
-    "react": "16.6.3"
+    "react-test-renderer": "^16.8.5"
   },
   "peerDependencies": {
+    "@react-native-pure/sibling": "^1",
     "react-native": ">= 0.47",
     "react": ">= 16.0.0"
   },
@@ -31,8 +43,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "@react-native-pure/sibling": "^1"
   }
 }
