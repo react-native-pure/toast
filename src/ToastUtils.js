@@ -6,7 +6,7 @@ import Toast from "./Toast"
 export default {
     show: (option: ToastOption) => {
         const remove = Sibling.append(
-            <Toast {...option} remove={remove}/>
+            <Toast {...option} remove={() => remove()}/>
         );
     }
 }

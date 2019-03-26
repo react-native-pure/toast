@@ -1,5 +1,5 @@
 import * as React from "react"
-import {Animated, StyleSheet, Text, TouchableWithoutFeedback} from "react-native"
+import {View, Animated, StyleSheet, Text, TouchableWithoutFeedback} from "react-native"
 import type {ToastOption} from "./Types";
 import {ToastAnimation, ToastDuration, ToastPosition} from "./Enums";
 
@@ -22,7 +22,7 @@ type Props = ToastOption & {
 }
 
 type State = {
-    opacity: Animated.Value
+    animateValue: Animated.Value
 };
 
 export default class Toast extends React.PureComponent<Props, State> {
@@ -30,11 +30,11 @@ export default class Toast extends React.PureComponent<Props, State> {
         position: ToastPosition.top,
         duration: ToastDuration.Short,
         hideOnPress: true,
-        animation: ToastAnimation.Fade
+        animation: ToastAnimation.none
     };
     timer = null;
     state = {
-        opacity: new Animated.Value(0)
+        animateValue: new Animated.Value(0)
     };
 
     render() {
@@ -49,12 +49,16 @@ export default class Toast extends React.PureComponent<Props, State> {
             toastStyle.top = "50%";
             toastStyle.transfrom = [{translateY: "-50%"}];
         }
+        if (this.props.animation === ToastAnimation.Fade) {
+            toastStyle.opacity = this.state.animateValue;
+        }
+        const TargetView = this.props.animation === ToastAnimation.none ? View : Animated.View;
         const content = (
-            <Animated.View style={[styles.toast, toastStyle, {opacity: this.state.opacity}]}>
+            <TargetView style={[styles.toast, toastStyle]}>
                 {this.props.renderIcon && this.props.renderIcon()}
                 <Text
                     style={[styles.message, this.props.styles ? this.props.styles.message : null]}>{this.props.message}</Text>
-            </Animated.View>
+            </TargetView>
         );
         if (this.props.hideOnPress) {
             return (
@@ -67,21 +71,30 @@ export default class Toast extends React.PureComponent<Props, State> {
     }
 
     componentDidMount() {
-        this.props.onShow && this.props.onShow();
-        Animated.timing(this.state.opacity, {
-            toValue: 1
-        }).start(() => {
-            this.timer = setTimeout(() => {
-                this.props.onHide && this.props.onHide();
-                Animated.timing(this.state.opacity, {
-                    toValue: 0
-                }).start(() => {
-                    this.props.onHidden && this.props.onHidden();
-                    this.props.remove();
-                })
-            }, this.props.duration);
+        if (this.props.animation === ToastAnimation.Fade) {
+            this.props.onShow && this.props.onShow();
+            Animated.timing(this.state.animateValue, {
+                toValue: 1
+            }).start(() => {
+                this.timer = setTimeout(() => {
+                    this.props.onHide && this.props.onHide();
+                    Animated.timing(this.state.animateValue, {
+                        toValue: 0
+                    }).start(() => {
+                        this.props.onHidden && this.props.onHidden();
+                        this.props.remove();
+                    })
+                }, this.props.duration);
+                this.props.onShown && this.props.onShown();
+            });
+        }
+        else {
             this.props.onShown && this.props.onShown();
-        });
+            this.timer = setTimeout(() => {
+                this.props.onHidden && this.props.onHidden();
+                this.props.remove();
+            }, this.props.duration);
+        }
     }
 
     componentWillUnmount() {

@@ -1,5 +1,198 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`show bottom toast 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        Object {
+          "bottom": 20,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "backgroundColor": "black",
+            "color": "white",
+          },
+          null,
+        ]
+      }
+    >
+      message
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`show center toast 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        Object {
+          "top": "50%",
+          "transfrom": Array [
+            Object {
+              "translateY": "-50%",
+            },
+          ],
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "backgroundColor": "black",
+            "color": "white",
+          },
+          null,
+        ]
+      }
+    >
+      message
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`show icon toast 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        Object {
+          "top": 20,
+        },
+      ]
+    }
+  >
+    <Text>
+      Icon
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "backgroundColor": "black",
+            "color": "white",
+          },
+          null,
+        ]
+      }
+    >
+      message
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`show icon toast that disable onPress 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        Object {
+          "top": 20,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "backgroundColor": "black",
+            "color": "white",
+          },
+          null,
+        ]
+      }
+    >
+      message
+    </Text>
+  </View>
+</View>
+`;
+
 exports[`show toast 1`] = `
 <View
   style={
@@ -7,5 +200,101 @@ exports[`show toast 1`] = `
       "flex": 1,
     }
   }
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        Object {
+          "top": 20,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "backgroundColor": "black",
+            "color": "white",
+          },
+          null,
+        ]
+      }
+    >
+      message
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`show toast 2`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
 />
+`;
+
+exports[`show toast during 1s 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        Object {
+          "top": 20,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "backgroundColor": "black",
+            "color": "white",
+          },
+          null,
+        ]
+      }
+    >
+      message
+    </Text>
+  </View>
+</View>
 `;

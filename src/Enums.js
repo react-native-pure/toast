@@ -10,5 +10,6 @@ export const ToastPosition = {
 };
 
 export const ToastAnimation = {
+    none: "none",
     Fade: "Fade"
 };
