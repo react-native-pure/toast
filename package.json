@@ -1,0 +1,29 @@
+{
+  "name": "@react-native-pure/toast",
+  "version": "0.0.1",
+  "description": "Toast组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "cm":"git-cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-native-pure/toast.git"
+  },
+  "author": "m860",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/react-native-pure/toast/issues"
+  },
+  "homepage": "https://github.com/react-native-pure/toast#readme",
+  "devDependencies": {
+    "commitizen": "^3.0.7",
+    "cz-conventional-changelog": "^2.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
