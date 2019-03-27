@@ -1,0 +1,11 @@
+.idea
+node_modules
+package-lock.json
+coverage
+
+.badge.json
+.coveralls.yml
+.releaserc
+.travis.yml
+babel.config.js
+jest.config.js
