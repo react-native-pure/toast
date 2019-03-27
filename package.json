@@ -35,9 +35,11 @@
     "react-test-renderer": "^16.8.5"
   },
   "peerDependencies": {
-    "@react-native-pure/sibling": "^1",
     "react-native": ">= 0.47",
     "react": ">= 16.0.0"
+  },
+  "dependencies": {
+    "@react-native-pure/sibling": "^1"
   },
   "config": {
     "commitizen": {
