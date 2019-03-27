@@ -25,6 +25,7 @@ exports[`show bottom toast 1`] = `
           "position": "absolute",
           "right": 0,
         },
+        null,
         Object {
           "bottom": 20,
         },
@@ -73,6 +74,7 @@ exports[`show center toast 1`] = `
           "position": "absolute",
           "right": 0,
         },
+        null,
         Object {
           "top": "50%",
           "transfrom": Array [
@@ -126,6 +128,7 @@ exports[`show icon toast 1`] = `
           "position": "absolute",
           "right": 0,
         },
+        null,
         Object {
           "top": 20,
         },
@@ -170,6 +173,7 @@ exports[`show icon toast that disable onPress 1`] = `
           "position": "absolute",
           "right": 0,
         },
+        null,
         Object {
           "top": 20,
         },
@@ -218,6 +222,7 @@ exports[`show toast 1`] = `
           "position": "absolute",
           "right": 0,
         },
+        null,
         Object {
           "top": 20,
         },
@@ -276,6 +281,7 @@ exports[`show toast during 1s 1`] = `
           "position": "absolute",
           "right": 0,
         },
+        null,
         Object {
           "top": 20,
         },

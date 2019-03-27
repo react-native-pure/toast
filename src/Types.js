@@ -6,7 +6,8 @@ export type ToastOption = {
     duration?: $Values<typeof ToastDuration>
     renderIcon?: () => React.Element,
     styles?: {
-        message: any
+        message: any,
+        container: any
     },
     hideOnPress?: boolean,
     animation?: $Values<typeof ToastAnimation>,

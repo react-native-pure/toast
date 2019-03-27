@@ -54,7 +54,7 @@ export default class Toast extends React.PureComponent<Props, State> {
         }
         const TargetView = this.props.animation === ToastAnimation.none ? View : Animated.View;
         const content = (
-            <TargetView style={[styles.toast, toastStyle]}>
+            <TargetView style={[styles.toast, this.props.styles ? this.props.styles.container : null, toastStyle]}>
                 {this.props.renderIcon && this.props.renderIcon()}
                 <Text
                     style={[styles.message, this.props.styles ? this.props.styles.message : null]}>{this.props.message}</Text>
