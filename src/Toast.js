@@ -28,7 +28,7 @@ type State = {
 export default class Toast extends React.PureComponent<Props, State> {
     static defaultProps = {
         position: ToastPosition.top,
-        duration: ToastDuration.Short,
+        duration: ToastDuration.short,
         hideOnPress: true,
         animation: ToastAnimation.none
     };
@@ -49,7 +49,7 @@ export default class Toast extends React.PureComponent<Props, State> {
             toastStyle.top = "50%";
             toastStyle.transfrom = [{translateY: "-50%"}];
         }
-        if (this.props.animation === ToastAnimation.Fade) {
+        if (this.props.animation === ToastAnimation.fade) {
             toastStyle.opacity = this.state.animateValue;
         }
         const TargetView = this.props.animation === ToastAnimation.none ? View : Animated.View;
@@ -71,7 +71,7 @@ export default class Toast extends React.PureComponent<Props, State> {
     }
 
     componentDidMount() {
-        if (this.props.animation === ToastAnimation.Fade) {
+        if (this.props.animation === ToastAnimation.fade) {
             this.props.onShow && this.props.onShow();
             Animated.timing(this.state.animateValue, {
                 toValue: 1

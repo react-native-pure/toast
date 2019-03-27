@@ -1,6 +1,6 @@
 export const ToastDuration = {
-    Long: 3500,
-    Short: 2000
+    long: 3500,
+    short: 2000
 };
 
 export const ToastPosition = {
@@ -11,5 +11,5 @@ export const ToastPosition = {
 
 export const ToastAnimation = {
     none: "none",
-    Fade: "Fade"
+    fade: "fade"
 };
