@@ -22,6 +22,7 @@ exports[`custom renderMessage 1`] = `
           "alignItems": "center",
           "justifyContent": "center",
           "left": 0,
+          "paddingVertical": 20,
           "position": "absolute",
           "right": 0,
         },
@@ -64,6 +65,7 @@ exports[`disable onPress 1`] = `
           "alignItems": "center",
           "justifyContent": "center",
           "left": 0,
+          "paddingVertical": 20,
           "position": "absolute",
           "right": 0,
         },
@@ -113,6 +115,7 @@ exports[`message is Object 1`] = `
           "alignItems": "center",
           "justifyContent": "center",
           "left": 0,
+          "paddingVertical": 20,
           "position": "absolute",
           "right": 0,
         },
@@ -164,6 +167,7 @@ exports[`show bottom toast 1`] = `
           "alignItems": "center",
           "justifyContent": "center",
           "left": 0,
+          "paddingVertical": 20,
           "position": "absolute",
           "right": 0,
         },
@@ -213,6 +217,7 @@ exports[`show center toast 1`] = `
           "alignItems": "center",
           "justifyContent": "center",
           "left": 0,
+          "paddingVertical": 20,
           "position": "absolute",
           "right": 0,
         },
@@ -224,100 +229,6 @@ exports[`show center toast 1`] = `
               "translateY": "-50%",
             },
           ],
-        },
-      ]
-    }
-  >
-    <Text
-      style={
-        Array [
-          Object {
-            "backgroundColor": "black",
-            "color": "white",
-          },
-          null,
-        ]
-      }
-    >
-      message
-    </Text>
-  </View>
-</View>
-`;
-
-exports[`show icon toast 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View
-    accessible={true}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-        },
-        null,
-        Object {
-          "top": 20,
-        },
-      ]
-    }
-  >
-    <Text>
-      Icon
-    </Text>
-    <Text
-      style={
-        Array [
-          Object {
-            "backgroundColor": "black",
-            "color": "white",
-          },
-          null,
-        ]
-      }
-    >
-      message
-    </Text>
-  </View>
-</View>
-`;
-
-exports[`show icon toast that disable onPress 1`] = `
-<View
-  style={
-    Object {
-      "flex": 1,
-    }
-  }
->
-  <View
-    style={
-      Array [
-        Object {
-          "alignItems": "center",
-          "justifyContent": "center",
-          "left": 0,
-          "position": "absolute",
-          "right": 0,
-        },
-        null,
-        Object {
-          "top": 20,
         },
       ]
     }
@@ -361,6 +272,7 @@ exports[`show toast 1`] = `
           "alignItems": "center",
           "justifyContent": "center",
           "left": 0,
+          "paddingVertical": 20,
           "position": "absolute",
           "right": 0,
         },
@@ -420,6 +332,7 @@ exports[`show toast during 1s 1`] = `
           "alignItems": "center",
           "justifyContent": "center",
           "left": 0,
+          "paddingVertical": 20,
           "position": "absolute",
           "right": 0,
         },

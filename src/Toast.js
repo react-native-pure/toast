@@ -9,7 +9,8 @@ const styles = StyleSheet.create({
         left: 0,
         right: 0,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingVertical: 20
     },
     message: {
         backgroundColor: "black",
