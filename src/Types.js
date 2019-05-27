@@ -4,7 +4,7 @@ export type ToastOption = {
     message: string,
     position?: $Values<typeof ToastPosition>,
     duration?: $Values<typeof ToastDuration>
-    renderIcon?: () => React.Element,
+    // renderIcon?: () => React.Element,
     styles?: {
         message: any,
         container: any

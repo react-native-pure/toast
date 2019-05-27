@@ -41,11 +41,9 @@ export default class Toast extends React.PureComponent<Props, State> {
         let toastStyle = {};
         if (this.props.position === ToastPosition.top) {
             toastStyle.top = 20;
-        }
-        else if (this.props.position === ToastPosition.bottom) {
+        } else if (this.props.position === ToastPosition.bottom) {
             toastStyle.bottom = 20;
-        }
-        else if (this.props.position === ToastPosition.center) {
+        } else if (this.props.position === ToastPosition.center) {
             toastStyle.top = "50%";
             toastStyle.transfrom = [{translateY: "-50%"}];
         }
@@ -55,7 +53,6 @@ export default class Toast extends React.PureComponent<Props, State> {
         const TargetView = this.props.animation === ToastAnimation.none ? View : Animated.View;
         const content = (
             <TargetView style={[styles.toast, this.props.styles ? this.props.styles.container : null, toastStyle]}>
-                {this.props.renderIcon && this.props.renderIcon()}
                 <Text
                     style={[styles.message, this.props.styles ? this.props.styles.message : null]}>{this.props.message}</Text>
             </TargetView>
@@ -87,8 +84,7 @@ export default class Toast extends React.PureComponent<Props, State> {
                 }, this.props.duration);
                 this.props.onShown && this.props.onShown();
             });
-        }
-        else {
+        } else {
             this.props.onShown && this.props.onShown();
             this.timer = setTimeout(() => {
                 this.props.onHidden && this.props.onHidden();
