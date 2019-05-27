@@ -1,7 +1,8 @@
 import {ToastAnimation, ToastDuration, ToastPosition} from "./Enums";
 
 export type ToastOption = {
-    message: string,
+    message: any,
+    renderMessage: (message: any, messageStyle: any)=>React.Node,
     position?: $Values<typeof ToastPosition>,
     duration?: $Values<typeof ToastDuration>
     // renderIcon?: () => React.Element,

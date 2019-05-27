@@ -32,10 +32,10 @@ Toast.show({
 
 ### ToastOption
 
-- `message` **string**
+- `message` **any** 默认是字符串
+- `renderMessage?` **(message:any,messageStyle:any)=>React.Node** 默认只能处理字符串的message
 - `position?` **"top"|"center"|"bottom"**  默认是`top`
 - `duration?` **number** 默认是2000
-- `renderIcon?` **()=>React.Element**
 - `styles?`
     - `message` **any** 消息的样式
     - `container` **any** 容器的样式

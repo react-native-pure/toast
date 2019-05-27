@@ -1,5 +1,147 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`custom renderMessage 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        null,
+        Object {
+          "top": 20,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 4,
+        }
+      }
+    >
+      <Text
+        style={null}
+      >
+        abc
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`disable onPress 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        null,
+        Object {
+          "top": 20,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "backgroundColor": "black",
+            "color": "white",
+          },
+          null,
+        ]
+      }
+    >
+      message
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`message is Object 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        },
+        null,
+        Object {
+          "top": 20,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderRadius": 4,
+        }
+      }
+    >
+      <Text
+        style={null}
+      >
+        hello
+        ,
+        world
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
 exports[`show bottom toast 1`] = `
 <View
   style={

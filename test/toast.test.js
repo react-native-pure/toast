@@ -2,7 +2,7 @@ import * as React from "react"
 import renderer from 'react-test-renderer'
 import WrapperComponent from "@react-native-pure/sibling/src/WrapperComponent"
 import ToastUtils from "../src/ToastUtils"
-import {Text} from "react-native"
+import {Text, View} from "react-native"
 
 test(`show toast`, (done) => {
     const onShown = jest.fn(() => {
@@ -62,19 +62,7 @@ test(`show toast during 1s`, (done) => {
     setTimeout(done, 5 * 1000);
 });
 
-test(`show icon toast`, (done) => {
-    const component = renderer.create(
-        <WrapperComponent></WrapperComponent>
-    );
-    ToastUtils.show({
-        message: "message",
-        renderIcon: () => <Text>Icon</Text>
-    });
-    expect(component.toJSON()).toMatchSnapshot();
-    setTimeout(done, 5 * 1000);
-});
-
-test(`show icon toast that disable onPress`, (done) => {
+test(`disable onPress`, (done) => {
     const component = renderer.create(
         <WrapperComponent></WrapperComponent>
     );
@@ -85,4 +73,45 @@ test(`show icon toast that disable onPress`, (done) => {
     expect(component.toJSON()).toMatchSnapshot();
     setTimeout(done, 5 * 1000);
 });
+
+test(`custom renderMessage`, (done) => {
+    const component = renderer.create(
+        <WrapperComponent></WrapperComponent>
+    );
+    ToastUtils.show({
+        message: "abc",
+        renderMessage: (message, style) => {
+            return (
+                <View style={{borderRadius: 4}}>
+                    <Text style={style}>{message}</Text>
+                </View>
+            )
+        }
+    });
+
+    expect(component.toJSON()).toMatchSnapshot();
+    setTimeout(done, 5 * 1000);
+});
+
+test(`message is Object`, (done) => {
+    const component = renderer.create(
+        <WrapperComponent></WrapperComponent>
+    );
+    ToastUtils.show({
+        message: {
+            m1: "hello",
+            m2: "world"
+        },
+        renderMessage: ({m1, m2}, style) => {
+            return (
+                <View style={{borderRadius: 4}}>
+                    <Text style={style}>{m1},{m2}</Text>
+                </View>
+            )
+        }
+    });
+
+    expect(component.toJSON()).toMatchSnapshot();
+    setTimeout(done, 5 * 1000);
+})
 

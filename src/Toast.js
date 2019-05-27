@@ -30,7 +30,13 @@ export default class Toast extends React.PureComponent<Props, State> {
         position: ToastPosition.top,
         duration: ToastDuration.short,
         hideOnPress: true,
-        animation: ToastAnimation.none
+        animation: ToastAnimation.none,
+        renderMessage: (message, messageStyle) => {
+            return (
+                <Text
+                    style={[styles.message, messageStyle]}>{message}</Text>
+            );
+        }
     };
     timer = null;
     state = {
@@ -53,8 +59,7 @@ export default class Toast extends React.PureComponent<Props, State> {
         const TargetView = this.props.animation === ToastAnimation.none ? View : Animated.View;
         const content = (
             <TargetView style={[styles.toast, this.props.styles ? this.props.styles.container : null, toastStyle]}>
-                <Text
-                    style={[styles.message, this.props.styles ? this.props.styles.message : null]}>{this.props.message}</Text>
+                {this.props.renderMessage(this.props.message, this.props.styles ? this.props.styles.message : null)}
             </TargetView>
         );
         if (this.props.hideOnPress) {
