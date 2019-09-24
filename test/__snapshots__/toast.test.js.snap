@@ -307,7 +307,47 @@ exports[`show toast 2`] = `
       "flex": 1,
     }
   }
-/>
+>
+  <View
+    accessible={true}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "paddingVertical": 20,
+          "position": "absolute",
+          "right": 0,
+        },
+        null,
+        Object {
+          "top": 20,
+        },
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "backgroundColor": "black",
+            "color": "white",
+          },
+          null,
+        ]
+      }
+    >
+      message
+    </Text>
+  </View>
+</View>
 `;
 
 exports[`show toast during 1s 1`] = `

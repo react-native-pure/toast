@@ -5,11 +5,12 @@ import ToastUtils from "../src/ToastUtils"
 import {Text, View} from "react-native"
 
 test(`show toast`, (done) => {
-    const onShown = jest.fn(() => {
-        expect(onShown.mock.calls.length).toBe(1);
-    });
+    const onShown = jest.fn();
     const onHidden = jest.fn(() => {
+        expect(component.toJSON()).toMatchSnapshot();
+        expect(onShown.mock.calls.length).toBe(1);
         expect(onHidden.mock.calls.length).toBe(1);
+        done();
     });
     const component = renderer.create(
         <WrapperComponent></WrapperComponent>
@@ -20,13 +21,9 @@ test(`show toast`, (done) => {
         onHidden
     });
     expect(component.toJSON()).toMatchSnapshot();
-    setTimeout(() => {
-        expect(component.toJSON()).toMatchSnapshot();
-        done();
-    }, 5 * 1000);
 });
 
-test(`show center toast`, (done) => {
+test(`show center toast`, () => {
     const component = renderer.create(
         <WrapperComponent></WrapperComponent>
     );
@@ -35,10 +32,10 @@ test(`show center toast`, (done) => {
         position: "center"
     });
     expect(component.toJSON()).toMatchSnapshot();
-    setTimeout(done, 5 * 1000);
+    component.unmount();
 });
 
-test(`show bottom toast`, (done) => {
+test(`show bottom toast`, () => {
     const component = renderer.create(
         <WrapperComponent></WrapperComponent>
     );
@@ -47,10 +44,10 @@ test(`show bottom toast`, (done) => {
         position: "bottom"
     });
     expect(component.toJSON()).toMatchSnapshot();
-    setTimeout(done, 5 * 1000);
+    component.unmount();
 });
 
-test(`show toast during 1s`, (done) => {
+test(`show toast during 1s`, () => {
     const component = renderer.create(
         <WrapperComponent></WrapperComponent>
     );
@@ -59,10 +56,10 @@ test(`show toast during 1s`, (done) => {
         duration: 1000
     });
     expect(component.toJSON()).toMatchSnapshot();
-    setTimeout(done, 5 * 1000);
+    component.unmount();
 });
 
-test(`disable onPress`, (done) => {
+test(`disable onPress`, () => {
     const component = renderer.create(
         <WrapperComponent></WrapperComponent>
     );
@@ -71,10 +68,10 @@ test(`disable onPress`, (done) => {
         hideOnPress: false
     });
     expect(component.toJSON()).toMatchSnapshot();
-    setTimeout(done, 5 * 1000);
+    component.unmount();
 });
 
-test(`custom renderMessage`, (done) => {
+test(`custom renderMessage`, () => {
     const component = renderer.create(
         <WrapperComponent></WrapperComponent>
     );
@@ -90,10 +87,10 @@ test(`custom renderMessage`, (done) => {
     });
 
     expect(component.toJSON()).toMatchSnapshot();
-    setTimeout(done, 5 * 1000);
+    component.unmount();
 });
 
-test(`message is Object`, (done) => {
+test(`message is Object`, () => {
     const component = renderer.create(
         <WrapperComponent></WrapperComponent>
     );
@@ -112,6 +109,6 @@ test(`message is Object`, (done) => {
     });
 
     expect(component.toJSON()).toMatchSnapshot();
-    setTimeout(done, 5 * 1000);
+    component.unmount();
 })
 
